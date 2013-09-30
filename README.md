@@ -3,10 +3,11 @@
 Resizable `UIImage`s are great, the only problem with them is that developers have to specify the appropriate cap insets each time an instance is created, even though the numbers will be the same 99% of the time. Maintaining these magic numbers dispersed in the codebase soon becomes a burden as the project grows and/or the images change. But it doesn't have to be like that.
 
 The provided `AutoCaps` category on `UIImage` delegates the job of setting and maintaining the cap insets to the person whom it should eventually concern in the team: the designer. The idea is the following:
-1. make a list of all the resizable images in the project
-2. create a PLIST file which maps these images to their appropriate cap insets
-3. let the magic flow: in your code use the methods in the provided `AutoCaps` category to instantiate resizable `UIImage`s without having to write a single cap inset value again
-4. each time a new image resource is added or an existing altered, have the designer update the PLIST accordingly
+
+- make a list of all the resizable images in the project
+- create a PLIST file which maps these images to their appropriate cap insets
+- let the magic flow: in your code use the methods in the provided `AutoCaps` category to instantiate resizable `UIImage`s without having to write a single cap inset value again
+- each time a new image resource is added or an existing altered, have the designer update the PLIST accordingly
 
 For example, if you previously had:
 
